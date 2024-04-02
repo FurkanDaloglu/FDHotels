@@ -1,0 +1,44 @@
+﻿@model FDHotelsProject.WebUI.Dtos.ServiceDto.UpdateServiceDto
+
+@{
+    ViewData["Title"] = "UpdateService";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+
+<h4>Güncellenecek Hizmet</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateService">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input type="hidden" asp-for="ServiceID" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceIcon" class="control-label">Hizmet İkonu</label>
+                <input asp-for="ServiceIcon" class="form-control" />
+                <span asp-validation-for="ServiceIcon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label">Hizmet Başlığı</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Hizmet Açıklama</label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Güncelle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="Index" class="btn btn-outline-dark">Listeye Geri Dön</a>
+</div>
+

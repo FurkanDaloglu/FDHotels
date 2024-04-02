@@ -1,0 +1,18 @@
+projede kullanýlan 
+Api Testi ve Swagger
+Automapper
+Identity
+Rapid Api
+jwt
+trigger
+Fluent Validation
+MailKit
+upload a image
+upload a file
+Newtonsoft.Json
+
+staff ve testimonial controllerlarý viewmodelden dtoya çekilecek
+video boyutu ayarlanacak
+Rezervasyon yaparken tarihte hatalar meydana gelebiliyor.
+AppUser tablosuna details aktif hale getirilecek ve detaylarda çalýþanýn lokasyon bilgisi getirme düzenlenecek.
+RapidApi de çekilen oteller bilgisi projeye eklenecek.

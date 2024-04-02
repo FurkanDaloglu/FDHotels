@@ -1,0 +1,59 @@
+﻿@model UpdateRoomDto
+
+@{
+    ViewData["Title"] = "UpdateRoom";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<h4>Güncellenecek Oda</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateRoom">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RoomID" />
+            <div class="form-group">
+                <label asp-for="RoomNumber" class="control-label">Oda Numarası</label>
+                <input asp-for="RoomNumber" class="form-control" />
+                <span asp-validation-for="RoomNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label">Oda Başlığı</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label">Fiyat</label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BedCount" class="control-label">Yatak Odası Sayısı</label>
+                <input asp-for="BedCount" class="form-control" />
+                <span asp-validation-for="BedCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BathCount" class="control-label">Banyo Sayısı</label>
+                <input asp-for="BathCount" class="form-control" />
+                <span asp-validation-for="BathCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoomCoverImage" class="control-label">Oda Kapak Fotoğrafı</label>
+                <input asp-for="RoomCoverImage" class="form-control" />
+                <span asp-validation-for="RoomCoverImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Açıklama</label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Odayı Güncelle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="Index" class="btn btn-outline-dark">Listeye Geri Dön</a>
+</div>

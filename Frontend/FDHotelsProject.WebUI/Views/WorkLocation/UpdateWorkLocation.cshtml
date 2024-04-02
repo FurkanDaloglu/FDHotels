@@ -1,0 +1,34 @@
+﻿@model UpdateWorkLocationDto
+@{
+    ViewData["Title"] = "UpdateWorkLocation";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+<h4>Güncellenecek Lokasyon</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateWorkLocation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="WorkLocationID" />
+            <div class="form-group">
+                <label asp-for="WorkLocationName" class="control-label">Lokasyon Adı</label>
+                <input asp-for="WorkLocationName" class="form-control" />
+                <span asp-validation-for="WorkLocationName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkLocationCity" class="control-label">Şehir</label>
+                <input asp-for="WorkLocationCity" class="form-control" />
+                <span asp-validation-for="WorkLocationCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Güncelle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="Index" class="btn btn-outline-dark">Listeye Geri Dön</a>
+</div>

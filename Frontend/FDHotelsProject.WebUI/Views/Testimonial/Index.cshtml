@@ -1,0 +1,60 @@
+﻿@model IEnumerable<TestimonialViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<h1>Tavsiyeler</h1>
+
+<p>
+    <a asp-action="AddTestimonial" class="btn mb-1 btn-rounded btn-outline-info">Yeni Referans</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Referans Görsel
+            </th>
+            <th>
+                Referans Adı
+            </th>
+            <th>
+                Referans Ünvanı
+            </th>
+            <th>
+                Açıklama
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestimonialID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                <a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a> |
+                <a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a> |
+                <a href="#" class="btn mb-1 btn-rounded btn-outline-dark">Detaylar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
