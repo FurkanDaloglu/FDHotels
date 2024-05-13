@@ -8,7 +8,7 @@ This project includes an API and MVC application developed in a NTier architectu
 - Rapid API
 - JSON Web Token (JWT)
 - Database MSSQL
-- MVC yapılarını API ile tüketme
+- Consuming MVC structures via API
 - Repository design pattern
 - NTier architecture
 - Sending e-mail(MailKit)
